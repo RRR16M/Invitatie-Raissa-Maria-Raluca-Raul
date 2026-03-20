@@ -64,32 +64,27 @@
     background-color: #fff; /* Fundal de siguranță */
 }
 
-/* Acesta este stratul care conține poza și care "stă pe loc" */
-.date-section-premium::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: linear-gradient(rgba(255,255,255,0.1), rgba(255,255,255,0.8)), url('media.jpg');
+.date-section-premium {
+    position: relative;
+    margin: 40px 0;
+    padding: 80px 20px; /* Controlul ferestrei */
+    border-top: 1px solid rgba(176,141,87,0.2);
+    border-bottom: 1px solid rgba(176,141,87,0.2);
+    
+    /* FUNDALUL - Varianta simplă, compatibilă peste tot */
+    background: linear-gradient(rgba(255,255,255,0.4), rgba(255,255,255,0.7)), url('media.jpg');
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
+    background-attachment: scroll !important; /* REZOLVĂ PROBLEMA IPHONE ȘI ZOOM-UL PE LAPTOP */
     
-    /* Pe Android/Desktop lăsăm fixed, pe iOS va face fallback automat la scroll, dar fără zoom-ul ăla urât */
-    background-attachment: scroll; 
-    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-/* Forțăm efectul de "fixed" doar unde știm că merge (Ecran mare/Android) */
-@media (min-width: 1024px) {
-    .date-section-premium::after {
-        background-attachment: fixed;
-    }
-}
-
-/* Watermark-ul 16.05 (îl punem peste poză) */
+/* Watermark-ul 16.05 - am adăugat z-index mic să stea în spate */
 .date-section-premium::before {
     content: "16.05";
     position: absolute;
@@ -98,19 +93,19 @@
     font-size: 8em;
     font-weight: 900;
     color: rgba(176, 141, 87, 0.04);
-    z-index: 2;
+    z-index: 1;
     white-space: nowrap;
+    pointer-events: none;
 }
 
-/* Textul principal - îl urcăm deasupra tuturor straturilor */
+/* Textul cu data - forțăm să fie deasupra */
 .date-text-main {
     font-size: 2.8em;
     letter-spacing: 6px;
     color: var(--gold);
     font-weight: 600;
     position: relative;
-    z-index: 3;
-    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    z-index: 2;
 }
 
         .locations-wrapper {
