@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="ro-RO">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Invitație: Raissa Maria | Raluca & Raul</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --gold: #B08D57;
+            --pink-bg: #FDE2E8;
+            --pink-accent: #E19BA6;
+            --text-dark: #333333;
+            --white: #ffffff;
+        }
+        body { 
+            font-family: 'Poppins', sans-serif; 
+            color: var(--text-dark); 
+            margin: 0; padding: 0; 
+            background-color: var(--pink-bg);
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--white);
+            box-shadow: 0 0 40px rgba(0,0,0,0.1);
+        }
+        .hero { 
+            padding: 60px 20px; 
+            background: var(--white); /* Am eliminat fundalul cu floare de aici */
+            border-bottom: 3px double var(--gold);
+        }
+        
+        /* Stil pentru floarea mică de sub Cununie */
+        .divider-flower {
+            width: 120px; /* Reglează aici cât de mică vrei să fie floarea */
+            height: auto;
+            margin: 20px auto 0 auto;
+            display: block;
+        }
+
+        .quote { 
+            font-family: 'Dancing Script', cursive; 
+            font-size: 1.9em; 
+            color: var(--pink-accent); 
+            margin-bottom: 10px;
+            line-height: 1.2;
+        }
+        h1 { font-family: 'Great Vibes', cursive; font-size: 3.5em; color: var(--gold); margin: 5px 0; font-weight: normal; }
+        .baby-name { font-family: 'Great Vibes', cursive; font-size: 3.8em; color: var(--pink-accent); margin: 10px 0; }
+        .parents-names { font-family: 'Great Vibes', cursive; font-size: 3.5em; color: var(--pink-accent); font-weight: normal; margin: 10px 0; }
+
+        .date-section-premium {
+            background-image: linear-gradient(rgba(255,255,255,0.1), rgba(255,255,255,0.8)), url('media.jpg');
+            background-position: center;
+            background-size: cover;
+            background-attachment: fixed;
+            padding: 100px 20px;
+            margin: 40px 0;
+            position: relative;
+            border-top: 1px solid rgba(176,141,87,0.2);
+            border-bottom: 1px solid rgba(176,141,87,0.2);
+            overflow: hidden;
+        }
+
+        .date-section-premium::before {
+            content: "16.05";
+            position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 8em;
+            font-weight: 900;
+            color: rgba(176, 141, 87, 0.04);
+            z-index: 1;
+            white-space: nowrap;
+        }
+
+        .date-text-main {
+            font-size: 2.8em;
+            letter-spacing: 6px;
+            color: var(--gold);
+            font-weight: 600;
+            position: relative;
+            z-index: 2;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .locations-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 10px;
+        }
+        .location-card {
+            background: #fffafb;
+            border-radius: 20px;
+            padding: 25px;
+            flex: 1;
+            min-width: 300px;
+            max-width: 400px;
+            box-shadow: 0 5px 15px rgba(225, 155, 166, 0.1);
+            border: 1px solid #f9ebed;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .link-text {
+            color: #b08d57; 
+            margin: 10px 0; 
+            font-size: 1.2em; 
+            font-family: 'Dancing Script', cursive;
+            line-height: 1.2;
+        }
+        h3 { color: var(--gold); text-transform: uppercase; font-size: 1.0em; letter-spacing: 2px; margin-bottom: 5px; min-height: 3em; display: flex; align-items: center; justify-content: center; }
+        .btn-map {
+            display: inline-block;
+            background-color: var(--gold);
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 30px;
+            font-size: 0.85em;
+            font-weight: 600;
+            margin-top: 15px;
+            box-shadow: 0 4px 10px rgba(176, 141, 87, 0.3);
+        }
+        .rsvp-info { background-color: var(--pink-bg); padding: 40px 20px; }
+        .phone-link { color: var(--text-dark); text-decoration: none; font-weight: 600; font-size: 1.1em; }
+        .form-box {
+            background: white; 
+            border-radius: 15px; 
+            margin-top: 25px; 
+            overflow: hidden; 
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+        }
+        iframe { width: 100%; min-height: 800px; border: none; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <section class="hero">
+        <p class="quote">O zi, două taine, o singură bucurie.</p>
+        <section class="section" style="padding: 0; overflow: hidden;">
+            <div style="width: 100%; height: 300px; position: relative; overflow: hidden;">
+                <video autoplay muted loop playsinline style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0;">
+                    <source src="invite.mp4" type="video/mp4">
+                    Browserul tău nu suportă redarea video.
+                </video>
+            </div>
+        </section>
+        <p class="quote" style="font-size: 1.7em;">Din iubirea noastră s-a născut o minune,<br>iar din credința noastră se împlinește o promisiune.</p>
+        
+        <p style="font-size: 1em; color: #666; text-transform: uppercase; letter-spacing: 2px; margin-top: 30px;">Vă invităm să ne fiți alături când fetița noastră,</p>
+        <div class="baby-name">Raissa Maria</div>
+        <p style="margin: 0; color: #666;">va primi</p>
+        <h1>Taina Sfântului Botez,</h1>
+        
+        <p style="margin-top: 15px; color: #666;">iar noi,</p>
+        <div class="parents-names">Raluca & Raul,</div>
+        <p style="margin: 0; color: #666;">ne vom uni sufletele prin</p>
+        <h1>Sfânta Cununie.</h1>
+        
+        <img src="https://exclusiv-invite.ro/wp-content/uploads/2022/10/floare.png" class="divider-flower" alt="floare decorativa">
+    </section>
+
+    <section class="section">
+        <div style="margin-bottom: 25px; line-height: 1.8;">
+            <p class="link-text" style="font-size: 1.5em;">Alături de noi vor fi cei care ne vor ghida pașii,</p>
+            <p><strong>Nașii</strong><br>Denisa și Robert Vulpe</p>
+            <p><strong>Moșii</strong><br>Ema și Raul Pană</p>
+        </div>
+        <p class="link-text" style="position: relative; z-index: 2; margin-top: 15px;">
+            Călăuziți de dragostea lor, vă așteptăm să scriem împreună<br>amintirile acestei zile binecuvântate,
+        </p>
+    </section>
+
+    <section class="date-section-premium">
+        <div class="date-text-main">16 MAI 2026</div>
+    </section>
+
+    <section class="section" style="background-color: #fffafb;">
+        <div class="locations-wrapper">
+            <div class="location-card">
+                <p class="link-text">Al cărei început își va avea binecuvântarea la</p>
+                <h3>Biserica Ortodoxă<br>"Adormirea Maicii Domnului"</h3>
+                <p><strong>Sat ȘASA, Comuna DĂNEȘTI<br>Ora 14:00</strong></p>
+                <div>
+                    <a href="https://maps.app.goo.gl/Quk83z4UWPkDqcrT7" target="_blank" class="btn-map">📍 LOCALIZARE BISERICĂ</a>
+                </div>
+            </div>
+            <div class="location-card">
+                <p class="link-text">Continuând cu marea sărbătoare la</p>
+                <h3>Restaurant DUMBRAVA<br>Sala 2</h3>
+                <p><strong>Str. Crângului 21, TG-JIU<br>Ora 18:00</strong></p>
+                <div>
+                    <a href="https://maps.app.goo.gl/5g6qKRUpRad2V7178" target="_blank" class="btn-map">📍 LOCALIZARE RESTAURANT</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="rsvp-info">
+        <p>Vă rugăm să ne confirmați prezența dumneavoastră până la data de <strong>20 Aprilie 2026</strong><br>la numerele de telefon:</p>
+        <p style="margin: 20px 0;">
+            <a href="tel:+4917632115307" class="phone-link">📱 +49 176 32115307</a><br><br>
+            <a href="tel:0765333140" class="phone-link">📱 0765 333 140</a>
+        </p>
+        <p>și/sau prin completarea formularului de mai jos:</p>
+        
+        <div class="form-box">
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe8Cb-MtZGT9fpmpQ-RO9rZrq0vtyCz8G8ARuNOJsJRxKi3WQ/viewform?embedded=true">Se încarcă...</iframe>
+        </div>
+    </section>
+
+    <footer style="padding: 50px 20px; font-size: 0.9em; color: var(--gold);">
+        <p>Vă așteptăm cu mult drag să sărbătorim împreună!</p>
+		<img src="https://exclusiv-invite.ro/wp-content/uploads/2022/10/floare.png" class="divider-flower" alt="floare decorativa">
+    </footer>
+</div>
+</body>
+</html>
